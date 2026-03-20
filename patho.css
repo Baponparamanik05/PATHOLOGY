@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #04257a;
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.7);
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: rgb(66, 231, 243);
+    margin: 0 15px;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #00d4ff;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero */
+.hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1581091870627-3f6cdbbfb1b0') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: zoom 10s infinite alternate;
+}
+
+@keyframes zoom {
+    from {background-size: 100%;}
+    to {background-size: 110%;}
+}
+
+.hero h2 {
+    font-size: 40px;
+    animation: fadeUp 2s ease;
+}
+
+.hero p {
+    margin: 10px 0;
+    animation: fadeUp 3s ease;
+}
+
+.hero button {
+    padding: 10px 25px;
+    border: none;
+    background: #00d4ff;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: white;
+}
+
+/* Animation */
+@keyframes fadeUp {
+    from {opacity: 0; transform: translateY(40px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Services */
+.services {
+    padding: 50px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #111827;
+    width: 260px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 20px #00d4ff;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+/* About */
+.about {
+    padding: 50px;
+    background: #111827;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about img {
+    width: 300px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.about img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact */
+.contact {
+    padding: 50px;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input, .contact textarea {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background: #00d4ff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact button:hover {
+    background: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: black;
+}
+
+/* _______________________________________________________________________________ */
+
+
+
+/* Gallery */
+.gallery {
+  padding: 30px 10px;
+  text-align: center;
+}
+
+
+.gallery-grid {
+  display: grid;
+  text-align: center;
+}
+
+
+.gallery-grid img {
+  width: 70%;
+  align-items: center;
+  text-align: center;
+  border-radius: 30px;
+  transition: transform 0.2s;
+}
+
+
+.gallery-grid img:hover {
+  transform: scale(1.08);
+}
+
